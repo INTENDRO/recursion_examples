@@ -1,4 +1,5 @@
 import recursionex.list_sum
+import recursionex.int_to_str
 import logging
 import unittest
 
@@ -22,6 +23,24 @@ class ListSumTestCase(unittest.TestCase):
 	def test_sum_mixed(self):
 		self.assertEqual(recursionex.list_sum.sum([10,-6,-4]),0)
 
+class IntStrTestCase(unittest.TestCase):
+	def test_conv_16(self):
+		self.assertEqual(recursionex.int_to_str.convert(123,16),"7B")
+
+	def test_conv_10(self):
+		self.assertEqual(recursionex.int_to_str.convert(432523,10), "432523")
+
+	def test_conv_8(self):
+		self.assertEqual(recursionex.int_to_str.convert(567,8), "1067")
+
+	def test_conv_2(self):
+		self.assertEqual(recursionex.int_to_str.convert(392,2), "110001000")
+
+	def test_conv_null(self):
+		self.assertEqual(recursionex.int_to_str.convert(0,10), "0")
+
+
+
 
 
 if __name__ == "__main__":
@@ -31,4 +50,4 @@ if __name__ == "__main__":
 
 	unittest.main()
 
-	# print("Final result: {}".format(recursionex.list_sum.sum([1,2,3])))
+	# print("Final result: {}".format(recursionex.int_to_str.convert(123,16)))
