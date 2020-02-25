@@ -1,6 +1,7 @@
 import recursionex.list_sum
 import recursionex.int_to_str
 import recursionex.recursion_list_sum
+import recursionex.factorial
 import logging
 import unittest
 
@@ -60,6 +61,23 @@ class RecursionListSumTestCase(unittest.TestCase):
 		self.assertEqual(recursionex.recursion_list_sum.sum([10,2,[[[]]]]), 12)
 
 
+class FactorialTestCase(unittest.TestCase):
+	def test_factorial_0(self):
+		self.assertEqual(recursionex.factorial.fact(0), 1)
+
+	def test_factorial_1(self):
+		self.assertEqual(recursionex.factorial.fact(1), 1)
+
+	def test_factorial_3(self):
+		self.assertEqual(recursionex.factorial.fact(3), 6)
+
+	def test_factorial_6(self):
+		self.assertEqual(recursionex.factorial.fact(6), 720)
+
+	def test_factorial_9(self):
+		self.assertEqual(recursionex.factorial.fact(9), 362880)
+
+
 
 if __name__ == "__main__":
 	log_format = "%(asctime)s %(levelname)s - %(message)s"
@@ -68,4 +86,4 @@ if __name__ == "__main__":
 
 	unittest.main()
 
-	# print("Final result: {}".format(recursionex.int_to_str.convert(123,16)))
+	# print("Final result: {}".format(recursionex.factorial.fact(6)))
