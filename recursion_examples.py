@@ -1,5 +1,6 @@
 import recursionex.list_sum
 import recursionex.int_to_str
+import recursionex.recursion_list_sum
 import logging
 import unittest
 
@@ -39,7 +40,24 @@ class IntStrTestCase(unittest.TestCase):
 	def test_conv_null(self):
 		self.assertEqual(recursionex.int_to_str.convert(0,10), "0")
 
+class RecursionListSumTestCase(unittest.TestCase):
+	def test_sum_1(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([1,2,[3,4],[5,6]]), 21)
 
+	def test_sum_2(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([20,123,[1,[4,6],3,[10,20]]]), 187)
+
+	def test_sum_3(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([[3,4],[5,6]]), 18)
+
+	def test_sum_single(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([1,2,[5]]), 8)
+
+	def test_sum_empty(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([1,2,[],[]]), 3)
+
+	def test_sum_empty_cascaded(self):
+		self.assertEqual(recursionex.recursion_list_sum.sum([10,2,[[[]]]]), 12)
 
 
 
