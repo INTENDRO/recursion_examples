@@ -2,6 +2,7 @@ import recursionex.list_sum
 import recursionex.int_to_str
 import recursionex.recursion_list_sum
 import recursionex.factorial
+import recursionex.fibonacci
 import logging
 import unittest
 
@@ -77,6 +78,22 @@ class FactorialTestCase(unittest.TestCase):
 	def test_factorial_9(self):
 		self.assertEqual(recursionex.factorial.fact(9), 362880)
 
+
+class FibonacciTestCase(unittest.TestCase):
+	def test_fibonacci_1(self):
+		self.assertEqual(recursionex.fibonacci.fib(1),1)
+
+	def test_fibonacci_3(self):
+		self.assertEqual(recursionex.fibonacci.fib(3),2)
+
+	def test_fibonacci_6(self):
+		self.assertEqual(recursionex.fibonacci.fib(6),8)
+
+	def test_fibonacci_9(self):
+		self.assertEqual(recursionex.fibonacci.fib(9),34)
+
+	def test_fibonacci_13(self):
+		self.assertEqual(recursionex.fibonacci.fib(13),233)
 
 
 if __name__ == "__main__":
