@@ -4,6 +4,7 @@ import recursionex.recursion_list_sum
 import recursionex.factorial
 import recursionex.fibonacci
 import recursionex.digit_sum
+import recursionex.two_step_sum
 import logging
 import unittest
 
@@ -97,21 +98,46 @@ import unittest
 # 		self.assertEqual(recursionex.fibonacci.fib(13),233)
 
 
-class DigitSumTestCase(unittest.TestCase):
+# class DigitSumTestCase(unittest.TestCase):
+# 	def test_sum_1(self):
+# 		self.assertEqual(recursionex.digit_sum.sum("123"), 6)
+
+# 	def test_sum_2(self):
+# 		self.assertEqual(recursionex.digit_sum.sum("9292"), 22)
+
+# 	def test_sum_3(self):
+# 		self.assertEqual(recursionex.digit_sum.sum("7454"), 20)
+
+# 	def test_sum_4(self):
+# 		self.assertEqual(recursionex.digit_sum.sum("434424967452"), 54)
+
+# 	def test_sum_5(self):
+# 		self.assertEqual(recursionex.digit_sum.sum(""), 0)
+
+
+class TwoStepSumTestCase(unittest.TestCase):
 	def test_sum_1(self):
-		self.assertEqual(recursionex.digit_sum.sum("123"), 6)
+		self.assertEqual(recursionex.two_step_sum.sum(6), 12)
 
 	def test_sum_2(self):
-		self.assertEqual(recursionex.digit_sum.sum("9292"), 22)
+		self.assertEqual(recursionex.two_step_sum.sum(10), 30)
 
 	def test_sum_3(self):
-		self.assertEqual(recursionex.digit_sum.sum("7454"), 20)
+		self.assertEqual(recursionex.two_step_sum.sum(7), 16)
 
 	def test_sum_4(self):
-		self.assertEqual(recursionex.digit_sum.sum("434424967452"), 54)
+		self.assertEqual(recursionex.two_step_sum.sum(19), 100)
 
 	def test_sum_5(self):
-		self.assertEqual(recursionex.digit_sum.sum(""), 0)
+		self.assertEqual(recursionex.two_step_sum.sum(30), 240)
+
+	def test_sum_null(self):
+		self.assertEqual(recursionex.two_step_sum.sum(0), 0)
+
+	def test_sum_negative(self):
+		self.assertEqual(recursionex.two_step_sum.sum(-1), 0)
+
+
 
 
 
